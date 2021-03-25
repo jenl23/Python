@@ -9,6 +9,6 @@ result = k
 count = 0 
 for i in range(n) :
     count += result//a[i]
-    result = result%a[i]
+    result %= a[i]
 
 print(count)
