@@ -15,3 +15,23 @@ for step in steps:
     result += 1
 
 print(result)
+------------------------------------------------
+
+a = (input())
+
+row = int(a[1])
+col = int(ord(a[0])) - int(ord('a')) + 1
+
+dx = [-2,-1, 1, 2, 1, -1, -2]
+dy = [-2,-2, -2, -1, 1, 2, 2, 1]
+# 반시계 방향으로 
+
+result = 0
+for i in range(5):
+  next_row = row + dx[i]
+  next_col = col + dy[i]
+
+  if next_row >= 1 and next_row <= 8 and next_col >=1 and next_col <= 8 :
+    result += 1
+
+print(result)
