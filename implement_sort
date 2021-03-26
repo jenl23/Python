@@ -1,0 +1,16 @@
+a = (input())
+
+char = []
+num = 0 
+
+for i in a :
+  #if int(ord('A')) <= int(ord(i)) <= int(ord('Z')) :
+  if i.isalpha():
+    char.append(i)
+  else:
+    num += int(i)
+
+char.sort()
+char.append(str(num))
+
+print(''.join(char))
