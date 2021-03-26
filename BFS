@@ -1,0 +1,40 @@
+from collections import deque
+
+def bfs(graph, start, visited):
+  queue = deque([start])
+  visited[start] = True #현재 노드 방문처리
+
+  while queue:
+    v = queue.popleft()
+    print(v, end=' ')
+    
+    for i in graph[v]: 
+      if not visited[i]:
+        queue.append(i)
+        visited[i] = True
+
+graph = [
+  [], #안쓰임
+  [2, 3, 8],  #1
+  [1, 7],     #2
+  [1, 4, 5],  #3 
+  [3, 5],     #4
+  [3, 4],     #5
+  [7],        #6
+  [2, 6, 8],  #7
+  [1, 7]      #8
+]
+
+visited = [False]*9
+
+bfs(graph, 1, visited)
+
+# 큐의 좌측에서 팝, 출력
+#          큐=[1],       1방문처리, pop 1, 1출력
+#그래프[1],큐=[2,3,8], 2,3,8방문, pop 2, 2출력
+#그래프[2],큐=[3,8,7], 7방문, pop 3, 3출력
+#그래프[3],큐=[8,7,4,5], 4,5방문, pop 8, 8출력
+#그래프[8],큐=[7,4,5], X, pop 7, 7출력
+#그래프[7],큐=[4,5,6], X, pop 4, 4출력
+#그래프[4],큐=[5,6], X, pop 5, 5출력
+#그래프[5],큐=[5,6], X, pop 6, 6출력
