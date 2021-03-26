@@ -1,0 +1,6 @@
+# list 
+a = [i for i in range(10)if i%2 ==0]
+
+# sort
+sort(key = lambda, x: (x[0}, x[1]))
+
