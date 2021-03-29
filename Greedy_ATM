@@ -1,0 +1,13 @@
+n = int(input())
+m_list = input().split()
+#m_list = map(int, input().split()), 맵객체는 소트 없음
+
+m_list.sort()
+result = 0
+
+for i in m_list:
+  result += n*int(i)
+  n-=1
+
+
+print(result)
