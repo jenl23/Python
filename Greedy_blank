@@ -1,0 +1,12 @@
+strings = input().strip().split('-')
+sum_n = 0
+
+#첫 더하기까지 합
+for i in strings[0].split('+'):
+    sum_n += int(i)
+
+if len(strings) > 1:
+    for s in strings[1:]:
+        #- 이후 이므로 더하기로 된부분을 모두 뺀다
+        sum_n -= sum(map(int, s.split('+')))
+print(sum_n)
