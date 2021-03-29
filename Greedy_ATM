@@ -1,13 +1,13 @@
 n = int(input())
-m_list = input().split()
-#m_list = map(int, input().split()), 맵객체는 소트 없음
-
+m_list = list(map(int, input().split()))
 m_list.sort()
-result = 0
+sum1 = 0
+sum2 = 0
 
 for i in m_list:
-  result += n*int(i)
+  sum2 += n*int(i)
   n-=1
+  #sum1 += i
+  #sum2 += sum1
 
-
-print(result)
+print(sum2)
