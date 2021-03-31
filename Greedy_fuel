@@ -1,0 +1,17 @@
+n = int(input())
+length = list(map(int, input().split()))
+price = list(map(int, input().split()))
+
+#총 비용 = 거리* 비용
+#최저 비용 = 거리 * 비용(이전꺼중에 최소값))
+
+result = 0 
+lower_price = price[0]
+
+for i in range(n-1):
+  if price[i] < lower_price :
+    lower_price = price[i]        
+  
+  result += lower_price*length[i]
+  
+print(result)
