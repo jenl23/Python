@@ -1,3 +1,5 @@
+#가까운 노드부터 너비우선 탐색
+
 from collections import deque
 
 def bfs(graph, start, visited):
