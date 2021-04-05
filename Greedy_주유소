@@ -1,3 +1,7 @@
+#주유소
+#도시, 주유가격, 최소 비용은?
+#도시 수, 주유가격
+
 n = int(input())
 length = list(map(int, input().split()))
 price = list(map(int, input().split()))
