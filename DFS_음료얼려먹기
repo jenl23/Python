@@ -1,3 +1,8 @@
+# n*m 얼음틀, 연결요소 찾기
+# 총 아이스크림 갯수
+# n m
+# 0~n+1 틀 정보
+
 def dfs(x, y):
   if x<= -1 or x >= n or y<=-1 or y>= m:
     return False
