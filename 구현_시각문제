@@ -1,0 +1,14 @@
+#구현- 시각문제
+# 정수가 입력되면 00시00분00초부터 N시 59분 59초까지 3이 들어간 수 세기
+
+h = int(input())
+
+count = 0
+
+for i in range(h + 1): #시각
+  for j in range(60): #분
+    for k in range(60): #초
+      if '3' in str(i) +str(j) + str(k):
+        count += 1
+
+print(count)
