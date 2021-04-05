@@ -14,6 +14,14 @@ def bfs(graph, start, visited):
       if not visited[i]:
         queue.append(i)
         visited[i] = True
+        
+def dfs(graph, v, visited):
+  visited[v] = True # 현재노드 방문
+  print(v, end=' ')
+
+  for i in graph[v]: 
+    if not visited[i]:
+      dfs(graph, i, visited)
 
 graph = [
   [], #안쓰임
@@ -33,7 +41,7 @@ bfs(graph, 1, visited)
 
 # 큐의 좌측에서 팝, 출력
 #          큐=[1],       1방문처리, pop 1, 1출력
-#그래프[1],큐=[2,3,8], 2,3,8방문, pop 2, 2출력
+#그래프[1],큐=[2 3 8] 2,3,8], 2,3,8방문, pop 2, 2출력
 #그래프[2],큐=[3,8,7], 7방문, pop 3, 3출력
 #그래프[3],큐=[8,7,4,5], 4,5방문, pop 8, 8출력
 #그래프[8],큐=[7,4,5], X, pop 7, 7출력
