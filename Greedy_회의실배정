@@ -1,12 +1,13 @@
+#회의최대수 입력됨
+#시작, 종료시간의 리스트가 입력됨
+
 n = int(input())
 meeting_list = []
 
 for _ in range(n):
   meeting_list.append(tuple(map(int, input().split())))
 
-meeting_list.sort(key=lambda x:(x[1], x[0]))
-
-#print(meeting_list)
+meeting_list.sort(key=lambda x:(x[1], x[0])) #종료시간, 시작시간으로 정렬
 
 end = meeting_list[0][1]
 count = 1
