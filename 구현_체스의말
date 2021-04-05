@@ -1,5 +1,7 @@
-a = (input())
+#8*8 체스판에서 L로 움직일 수 있는 나이트, 최대 경우의 수
+# a1 ==> 2
 
+a = (input())
 row = int(a[1])
 col = int(ord(a[0])) - int(ord('a')) + 1
 
