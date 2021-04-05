@@ -1,4 +1,7 @@
-strings = input().strip().split('-')
+#괄호를 넣어 최소값 만들기
+#수식입력, 최소값 출력
+
+strings = input().strip().split('-') #공백제거, -로 된부분 리스트만들기
 sum_n = 0
 
 #첫 더하기까지 합
