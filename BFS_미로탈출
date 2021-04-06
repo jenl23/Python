@@ -1,3 +1,6 @@
+#N줄, M열
+# BFS, 인접노드가 1이라면 노드값을 이동칸의 개수 2로 바꿈
+
 def bfs(x, y):
   qu = deque()
   qu.append((x, y))
