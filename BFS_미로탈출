@@ -15,7 +15,7 @@ def bfs(x, y):
       #공간 넘으면 무시
       if nx < 0 or nx >= n or ny< 0 or ny>= m:
         continue
-      #벽인경우 무시
+      #괴물인 경우 무시
       if graph[nx][ny] == 0:
         continue
       #처음방문시에 최단거리 기록
