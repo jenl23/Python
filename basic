@@ -2,8 +2,49 @@
 # 최적 부분구조와 중복되는 부분 문제 해결
 
 # list 
-a = [i for i in range(10)if i%2 ==0]
-
+a = [i for i in range(10) if i%2 ==0]
 # sort
 sort(key = lambda, x: (x[0}, x[1]))
+
+#Counter
+from collections import Counter
+c = Counter('abcdeabcdabcaba')  # count elements from a string
+c.most_common(3)                # three most common elements  [('a', 5), ('b', 4), ('c', 3)]
+sorted(c)                       # list all unique elements    ['a', 'b', 'c', 'd', 'e']
+''.join(sorted(c.elements()))   # list elements with repetitions    'aaaaabbbbcccdde'
+sum(c.values())                 # total of all counts   15
+c['a']                          # count of letter 'a'  5
+for elem in 'shazam':           # update counts from an iterable
+    c[elem] += 1                # by adding 1 to each element's count
+c['a']                          # now there are seven 'a'#  7
+del c['b']                      # remove all 'b'
+c['b']                          # now there are zero 'b'# 0
+d = Counter('simsalabim')       # make another counter
+c.update(d)                     # add in the second counter
+c['a']                          # now there are nine 'a' 9
+c.clear()                       # empty the counter
+c = Counter('aaabbc')
+c['b'] -= 2                     # reduce the count of 'b' by two
+c.most_common()                 # 'b' is still in, but its count is zero,   [('a', 3), ('c', 1), ('b', 0)]
+
+#enum
+student = ['a', 'b', 'c']
+for x, y in enumerates(student):
+print(x, y), 0 a / 1 b, 2 c
+#zip
+[a, b, c], [1, 2, 3, 4]
+zip(x, y) (a, 1), (b, 2), (c, 3)
+
+#reduce
+from functools import reduce
+reduce(집계 함수, 순회 가능한 데이터[, 초기값])       
+num=[1,2,3,4,5]
+print(reduce(lambda acc, cur : acc + cur, num, 0))  # 15
+
+data = [1, 2, 3, 4, 5]
+def sum(a, b):  return a + b
+reduce(sum, data)   # 15
+
+
+
 
